@@ -1,0 +1,249 @@
+extends layout
+
+//- STUDY PAGE
+block content
+  div(class="STUDY-wrapper" id="outside")
+    div(class="STUDY-contents")
+      h1(style="margin-bottom: 10px; ") Table of Contents
+      ul(style="margin-top: 0; padding-top: 0;")
+        li(style="margin-top: 0; padding-top: 0;") <a href="#Midterm1">Midterm 1</a>
+        ul
+          li <a href="#Midterm1">HTML</a>
+          li <a href="#M1_2">Document Object Model</a>
+          li <a href="#M1_3">Box Model</a>
+          li <a href="#M1_4">Development Cycle</a>
+
+        li <a href="#Midterm2">Midterm 2<//a>
+        ul 
+          li <a href="#Midterm2">Cookies</a>
+          li <a href="#M2_2">HTTP</a>
+          li <a href="#M2_3">JavaScript</a>
+
+        li <a href="#Midterm3">Midtem 3<//a>
+        ul 
+          li <a href="#Midterm3">Ports / Local Server</a>
+          li <a href="#M3_2">Model-View-Controller Architecture</a>
+          li <a href="#M3_3">NPM -> Node Package Manager</a>
+          li <a href="#M3_4">Express use (tie it all together)</a>
+          li <a href="#M3_5">Example Request (How does it happen?)</a>
+
+    div(class="STUDY-body" id="Midterm1" style="box-shadow: -20px -16px rgba(207, 102, 121, 1);")
+      div(class="circles" style="border-color: rgba(207, 102, 121, 1);")
+      div(class="rings")
+      div(class="lines")
+      h3 HTML
+      ul
+        li Hyper-Text Markup Language
+        ul 
+          li Links to other websites (hyperlinks)
+          li Enhancements to our text (marking it up)
+          li The way through which we communicate our document
+        li Tags
+        ul 
+          li The organizing marks of our document, that specifies the structure
+          ul
+            li <b>< h1 ></b> All about Dogz! <b>< /h1 ></b>
+            ul 
+              li <b>opening</b> to <b>closing</b> tags
+          li <b>Attributes</b>
+          ul 
+            li additional parts to our tags
+            li <b>< a href='www.something.com' ></b>Click me!<b>< /a ></b>
+            ul 
+              li 'href' here is an attribute in the anchor tag
+        li Accessability 
+        ul 
+          li Use theming colors and structural elements that make your website useable by all
+          li Proper contrast of text on background, alt attributes in <b>< img ></b> tags
+        li <b>Styles </b>
+        ul 
+          li The style of tags is determined by the browser that loads it
+          ul 
+            li But we can control how the browser shows such information
+          li Use style attribute
+          ul 
+            li <b>< h1 style=”color: orange;” >< /h1 ></b>
+            li Style of children inherited from parent
+          li Basic Styles 
+          ul
+            li <b>color</b> -> color of text
+            li <b>background-color</b> -> color of background
+            li <b>font-size</b> -> size of font
+            li(id="M1_2") <b>font-style</b> -> font style (Arial, Helvetica, Roman)
+            ul
+              li Look into it and play around!
+
+
+      h3 Document Object Model
+      ul
+        li Each element a child of another element, kind of an upside down tree
+        ul
+          li html is the parent of the body
+          li(id="M1_3") body is the parent of the tags used within
+          li The tags have their own children as used
+
+      h3 Box Model <span style="font-weight: normal; font-size: 16px;">(all block elements in HTML)</span>
+      ul
+        li The content is surrounded by the padding
+        li(id="M1_4") The padding is surrounded by the outline
+        li The outline is surrounded by the margin
+
+      h3 Development Cycle
+      ul
+        li Edit document
+        li Save work
+        li Communicate progress with client (feedback)
+        li Repeat
+
+        - let n = 0;
+        while n < 2
+          - n++;
+          li(style="color: transparent;") a
+
+    div(class="STUDY-body" id="Midterm2" style="box-shadow: -20px -16px rgba(126, 51, 163, 1);")
+      div(class="circles" style="border-color: rgba(126, 51, 163, 1);")
+      div(class="rings")
+      div(class="lines")
+      h3 Cookies
+      ul 
+        li(id="M2_2") A piece of data stored on your browser that can be accessed by webpages
+        li Request/Response cycle inherently <b>stateless</b>, cookies used for this purpose
+
+      h3 HTTP <i><span style="font-weight: normal; font-size: 16px;">(HyperText Transfer Protocol)</span></i>
+      ul 
+        li Files sent across internet come from different servers, so how do they communicate?
+        ul 
+          li HTTP is the communication protocol to transfer data between devices
+        li <b>Methods</b>
+        ul 
+          li <u>Get</u> -> Request a resource from server
+          li <u>Post</u> -> Update resource on server
+          li <u>Put</u> -> <b>Idempotent</b> update of server resource
+          ul
+            li Put is idempotent, so it doesn't update repeated attempts in short succession
+            li Can't hit buy and end up with 50 orders by accident
+          li <u>Delete</u> -> Get rid of resource on server
+        li <b>HTTPS</b>
+        ul 
+          li A secure (<i>encrypted</i>) connection to protect against HTTP bad actors
+        li Example
+        ul 
+          li <span style="color: blue;">https://www.amazon.com/How-To/Sing/dp/012?ref=sr&Keywords=happy+sing</span>
+          ul 
+            li <b style="color: blue;">https</b> -> protocol to communicate
+            li <b style="color: blue;">www.amazon.com</b> -> domain name of website (where in internet located)
+            li(id="M2_3") <b style="color: blue;">/How-To/Sing</b> -> where to go on server for resource
+            li <b style="color: blue;">?ref=sr&Keywords=happy+sing</b> -> query string, parameters for request
+
+      h3 JavaScript
+      ul 
+        li A popular dynamically typed interpreted language for web development
+        ul 
+          li <b>HTML</b> - Structure of page and where information is
+          li <b>CSS</b> - style of page and overall 'look'
+          li <b>JavaScript</b> - interaction with webpage
+        li Not actually related to ‘Java' coding language
+        ul 
+          li Named such as Java was popular at the time of creation
+        li Asynchronous Execution
+        ul 
+          li One of the most powerful aspects of javascript
+          ul 
+            li Allows for concurrent execution of code
+            li Large amount of HTTP requests and responses at varying speeds
+        li <b>Client-Side</b>
+        ul 
+          li JavaScript that is sent and ran through the individual users browser
+          li Typically used to update website dynamically, or send requests to server
+          li Part of the websites <i>frontend</i>
+        li <b>Server-Side</b>
+        ul 
+          li JavaScript that runs on the server of the website
+          li Typically handles requests and responses for website, as well as server resource use
+          li Part of the websites <i>backend</i>
+
+        - n = 0;
+        while n < 5
+          - n++;
+          li(style="color: transparent;") a
+      
+    div(class="STUDY-body" id="Midterm3" style="box-shadow: -20px -16px rgba(31, 49, 166, 1);")
+      div(class="circles" style="border-color: rgba(31, 49, 166, 1);")
+      div(class="rings")
+      div(class="lines")
+      h3 Ports / Local Server
+      ul 
+        li 'localhost' or '127.0.0.1' for hosting off computer
+        li Computer can have several types of servers runnign on it 
+        ul
+          li 80 - HTTP
+          li 80 - HTTPS
+          li 80 - FTP
+          li(id="M3_2") 80 - SSH
+          li 3000 - General Development
+      
+      h3 Model-View-Controller Architecture
+      ul 
+        li Generally, webpages are broken into three parts: 
+        ul 
+          li <b>Model</b> -> Data of the webpage <b>(updates view)</b>
+          ul 
+            li data represented in dedicated data structures
+            li Databases, objects (JSON), <u>tables (CSV, Excel)*Don't do this one</u>, just data no changes
+            li Tables typically expand rows to new data, not columns
+
+          li <b>View</b> -> Visual Representation of data (What is seen)
+          ul 
+            li Typically made of HTML, CSS, and JavaScript 
+            li Templating languages allow for iteration and conditionals in view
+
+          li <b>Controller</b> -> Behaviour of the webpage (What is used)<b>(manipulates model)</b>
+          ul 
+            li Manipulates the data model through the view 
+            li 
+        
+        li Thin Clients
+        ul 
+          li Most of MVC application lives on the server 
+        li(id="M3_3") Thick Clients
+        ul 
+          li Most of MVC application lives on the client side 
+      
+      h3 NPM -> Node Package Manager 
+      ul 
+        li NPM acts as the package manager <b>(like pip3 install)</b>
+        li installs to current directory (so just in project)
+        li Essentially a repository for software
+        li How to use 
+        ul 
+          li npm init (within directory, sets up with you)
+          li npm install [package_name] (Adds package to /node_modules where software actually installed)
+          li(id="M3_4") using '-g' installs gloabally, as we did with pug 
+          li .gitignore node_modules to share with others, as just have to 'npm install' in directory to get all dependencies
+
+      h3 Express use (tie it all together)
+      ul 
+        li express --view=pug [new_project_directory_name]
+        li(id="M3_5") Change around app.js by adding new routers for each view (each new page)
+        li Create layout to extend on other views for standard portions of pages shared across all 
+      
+      h3 Example Request (How does it happen?)
+      ul 
+        li User enters a URL into browser (and the point to go i.e. localhost:3000/schedule or just .../ with home)
+        ul
+          li /schedule goes to router in app.js and routes folder 
+          li router takes URL and sends to different views
+          ul 
+            li '/' to home view 
+            li '/schedule' to schedule page view
+        li HTML and CSS and JavaScript rendered serverside/clientside once sent
+
+  //- Use button here to download the saved version of notes
+  button(class="pdf_download" onclick="download_notes()") Download PDF doc of Notes
+  a(id="download-pdf" style="display:none" href="/images/htmlpdf.pdf" download="midterm_notes.pdf") Download PDF
+
+  script.
+    // Scroll past main HOME top to info just below faded image
+    function download_notes() {
+      document.getElementById("download-pdf").click()
+    }

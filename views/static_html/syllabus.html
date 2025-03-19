@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ECCS 2441: Web Development</title>
+    <style>
+      body {
+        margin: 0px;
+        margin-top: 60px;
+        background-color: #333;
+        color: white;
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body style="font-family:'Times New Roman', Times, serif; margin: 0px; margin-top: 100px; background-color: #333; color: black;">
+    
+    <header style="background-color: #579fed; margin-top: 0px;">
+      <h1 style="text-align: center; font-family: Brush Script MT; margin-top: 0px;">
+        ECCS 2441: Web Development
+      </h1>
+      <h2 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif;">
+        <sup>
+          Ohio Northern, Fall 2024
+        </sup>
+      </h2>
+    </header>
+    
+    <table> <!-- Place 'general info' and 'class objectives' into a table to put them side-by-side -->
+      <tr>
+        <td>
+          <!-- Another table to better format the spacing of 'general info' with vertical spacing -->
+          <table>
+            <tr>
+              <td>
+                <p style="font-size: 8px; color: #333;">
+                  SPACE
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <!-- ***** General info ***** -->
+                <section style="background-color: rgb(174, 206, 241);">
+                  <h2 style="background-color: #68acf4;">General information:</h2>
+                  <table>
+                    <tr>
+                      <td>Instructor</td>
+                      <td>Dr. Ian Kropp</td>
+                    </tr>
+
+                    <tr>
+                      <td>Email</td>
+                      <td>i-kropp@onu.edu</td>
+                    </tr>
+
+                    <tr>
+                      <td>Class times</td>
+                      <td>M-W-F: 9:00 to 9:50</td>
+                    </tr>
+
+                    <tr>
+                      <td>Office hours</td>
+                      <td>
+
+                        <ul> 
+                        <li> Monday: 3 to 4PM           </li>  
+                        <li> Tuesday: 9 to 11AM, 2PM-3PM         </li>
+                        <li> Wednesday: 1-2PM        </li>
+                        </ul>
+
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Office</td>
+                      <td>Kennedy 242</td>
+                    </tr>
+
+                    <tr>
+                      <td>Classroom</td>
+                      <td>Kennedy 307</td>
+                    </tr>
+
+                    <tr>
+                      <td>Required Textbooks</td>
+                      <td>None</td>
+                    </tr>
+
+                    <tr>
+                      <td>Mini-midterms (non-cumulative)</td>
+                      <td>
+                        <ul>
+                          <li>Midterm 1: September 22nd </li> 
+                          <li>Midterm 2: TBA</li>
+                          <li>Midterm 3: TBA</li>
+                        </ul>
+                    </td>
+                  </tr>
+                </table>
+              </section>
+              </td>
+            </tr>
+          </table>
+
+        <!-- spacing between tables -->
+        <td><p style="color: #333;">SPACESPACESPACESPACESPACE</p></td>
+
+        <td>
+          <!-- ***** Course objectives ***** -->
+           <section style="background-color: rgb(174, 206, 241);">
+            <h2 style="background-color: #68acf4;">Course Objectives:</h2>
+            <p> By the end of this semester, you should be able to: </p>
+
+            <!-- Nested course objective list -->
+            <ol>
+              <li>
+                Work with ambiguous client requirements in order to create a <b><u>full stack web application</u></b> with 
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                </ul>
+              </li>
+
+              <br>
+
+              <li>
+                Understand HTTP well enough to 
+                <ul>
+                  <li>Debug broken websites</li>
+                  <li>Optimize poorly performing websites</li>
+                  <li>Use REST API calls to client specifications</li>
+                  <li>Choose the appropriate HTTP method for appropriate scenarios</li>
+                  <li>Describe to a lay person the benefits of HTTPS</li>
+                </ul>
+              </li>
+
+              <br>
+
+              <li>Create accessible web applications</li>
+            </ol>
+          </section>
+        </td>
+      </tr>
+    </table>
+
+    <!-- ***** Grade breakdown ***** -->
+    <table>
+      <tr>
+        <td>
+          <h2 style="background-color: #68acf4;">Grade Breakdown</h2>
+          <table border="2px" cellspacing="0">
+            <tr style="background-color: black; color: white;">
+              <th>Assesment</th>
+              <th>Weight</th>
+              <th>Description</th>
+            </tr>
+
+            <tr style="background-color: rgb(174, 206, 241);">
+              <td>Bi-weekly assignments</td>
+              <td>30%</td>
+              <td>Basic coding assignments, completed individually</td>
+            </tr>
+
+            <tr style="background-color: rgb(86, 129, 221);">
+              <td>Bi-weekly coding interviews</td>
+              <td>10%</td>
+              <td>
+                Simple 3-5-minute coding interviews, similar to what you might experience <br>
+                at a job interview. These are completion graded.
+              </td>
+            </tr> 
+
+            <tr style="background-color: rgb(174, 206, 241);">
+              <td>Mini midterms</td>
+              <td>35%</td>
+              <td>Three non-cumulative midterms</td>
+            </tr>
+
+            <tr style="background-color: rgb(86, 129, 221);">
+              <td>Final Project</td>
+              <td>35%</td>
+              <td>
+                This final project will join all of the homework assignments into one <br>
+                final product. You will be creating a full MVC application using Mongo <br>
+                DB, Express, Pug, HTML, and CSS.
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          <h2 style="background-color: #333; color: #333;">a</h2>
+          <a href="https://www.onu.edu/" target="_blank">
+            <img title="boop" src="/images/mylio.jpeg" alt="Cute bear">
+          </a>
+        </td>
+      </tr>
+    </table>
+
+      <!-- ***** Course format ***** -->
+      <table style="background-color: rgb(174, 206, 241);">
+        <tr>
+          <td>
+            <h2 style="background-color: #68acf4;">Course Format</h2>
+            <p>This course is going to go beyond the traditional lecture format, and will at times include:   </p>
+
+            <ul>
+              <li>Lab-based lectures </li><br>
+              <li>Student lead learning</li><br>
+              <li>Ambiguous real-world engineering problems</li>
+            </ul>
+          </td>
+          <td>
+            <img title="Math time" src="/images/engineer.jpeg" alt="Engineer doing math" width="300" height="180">
+          </td>
+        </tr>
+        <tr>
+        </tr>
+      </table>
+
+
+    <!-- ***** Academic honesty ***** -->
+    <section style="background-color: rgb(174, 206, 241);">
+      <h2 style="background-color: #68acf4;">Academic Honesty</h2>
+      <p>
+        For individual assignments, I expect you to complete the work entirely by yourself. <b><u>Passing someone
+        else's work as your own will not be tolerated</u></b>. However, I encourage you to discuss course topics with
+        me or your peers! Often all it takes to understand a topic is to talk it through with someone else. If
+        you're unclear about this distinction, I'd be happy to talk it over with you.
+      </p>
+    </section>
+    <table>
+      <tr>
+        <td>
+          <section style="background-color: rgb(174, 206, 241);">
+            <h2 style="background-color: #68acf4;">Generative AI</h2>
+            <p>
+              Generative AI tools, such as ChatGPT, are extremely beneficial to learning and coding. In fact, I
+              encourage you to use generative AI for the following use cases:
+            </p>
+
+            <ul>
+              <li>As a virtual tutor to clarify course concepts</li>
+              <ul>
+
+                <li>e.g., how do I import CSS into my web page?</li>
+                <li>e.g., why is HTTPS an important protocol?</li>
+              </ul>
+              <br>
+              <li>As a code reviewer </li>
+              <ul>
+                <li>
+                  i.e., pasting your code into a chat service to get feedback on your code
+                </li>
+              </ul> 
+              <br>
+              <li>Explaining code snippets that you don’t understand</li>
+              <ul>
+                <li>
+                  e.g., “why does every web page start with <code>&lt;!DOCTYPE html&gt;</code>?”
+                </li>
+              </ul> 
+            </ul>
+            <p>
+              On the other hand, generative AI output is often very incorrect, so I encourage you to cross reference its
+              output. Also, just as you shouldn’t copy off of a fellow student, <b><u>don’t copy off of ChatGPT</u></b>. In short,
+              avoid:
+            </p>
+            <ul>
+              <li>Directly copying and pasting entire programs from generative AI models</li>
+              <li>Using code from generative AI models that you don’t understand.</li>
+            </ul>
+            <p>
+              In other words, <b><u>treat generative AI as a classmate</u></b>: someone you can discuss course topics with, but
+              don’t copy and paste their work or copy off of their work during an exam.
+            </p>
+          </section>
+        </td>
+        <td style="color: white;">
+          <p style="text-align: center;">
+            Look at this man-made horror beyond the limits of generative AI
+          </p>
+          <center><img title="Scary Elder God" src="/images/klondike.jpeg" alt="Sad sun bear, it honestly looks very scary, almost euclidian, dare I say LoveCraftian"></center>
+          <p style="text-align: center;">
+            The OpenAI mind can't comprehend <br>such universally cosmic dread
+          </p>
+        </td>
+      </tr>
+    </table>
+
+    <!-- ***** Late Policy ***** -->
+    <section style="background-color: rgb(174, 206, 241);">
+      <h2 style="background-color: #68acf4;">Late Policy</h2>
+
+      <ul>
+        <li>
+            If you feel that you cannot finish an assignment well before the due date, then please contact
+            me, and we can discuss whether or not an extension is feasible. You must contact far ahead of
+            the due date (i.e., don’t wait until 5 minutes before the assignment due date). Extensions will
+            ultimately be under my discretion. Examples of excuses are:
+        </li>
+        <br>
+        <ul>
+          <li> Family emergencies                    </li><br>
+          <li> Heath emergencies                     </li><br>
+          <li> Extraordinary work loads              </li><br>
+        </ul>
+        <li>
+          You can have <b><u>1 freebie assignment extension</u></b> that you may use to add one extra week to any
+            assignment without any excuse. Use this wisely!
+        </li><br>
+        <li>All unexcused assignment grades will be reduced by <b><u>30%</u></b> every day past its due date.</li>
+      </ul>
+    </section>
+
+    <!-- ***** Other course policies ***** -->
+    <section style="background-color: rgb(174, 206, 241);">
+      <h2 style="background-color: #68acf4;">Other Course policies</h2>
+      <p>
+        See other common course policies 
+        <a target="_blank" href="https://my.onu.edu/registrars_office/policies">here</a>.
+      </p>
+    </section>
+  </body>
+</html>

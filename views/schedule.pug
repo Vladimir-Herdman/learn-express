@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  div(class="SCHEDULE-body")
+    each week in schedule
+      div
+        each day in week
+          if day.dow === "Monday"
+              h2 Week #{day.week}
+          h3 #{day.dow}
+          ul 
+              li #{day.topic}
+
+//- SCHEDULE PAGE
+//-block content
+  div(class="SCHEDULE-body")
+    each day in schedule 
+      div 
+        h2 #{day.date} 
+        ul 
+          each topic in day.topics
+            li #{topic}

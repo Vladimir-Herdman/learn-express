@@ -1,0 +1,110 @@
+extends layout
+
+//- HOME
+block content
+  //- Link to scroll down page smoothly
+  a(href="#HOME-class-info" style="display: none;") INVIS LINK TO INFO
+  
+  div(class="HOME-body" style="scroll-behavior: smooth;")
+
+    div(class="main-image")
+      img(src="/images/webdev_background.jpeg" alt="Computer screen with code on it")
+      h1 Welcome to Web Development!
+      div(class="main-arrow")
+        div(class="main-arrow-base")
+      div(class="main-arrow-left")
+        div(class="main-arrow-base")
+      div(class="main-arrow-right")
+        div(class="main-arrow-base")
+    
+    div(class="HOME-class-info" id="HOME-class-info")
+      
+      //- What is web development
+      div(id="HOME-top-div" style="margin-top: 100px;")
+        img(src="/images/whatiswebdev.png" title="Coding languages" alt="General Web Dev tools")
+        h2 What is Web Development? 
+        p.
+          Web development is the process of creating, maintaining, and
+          improving websites and web applications involving coding, web 
+          design, database management, and mainenance.  There are two 
+          main aspects that are focused on in general:
+
+        ul
+          li.
+            Front-end: Focuses on the user-facing side of a website, 
+            including the layout, design, and interactivity
+          br
+          li.
+            Back-end: Focuses on the server-side functionality, such 
+            as storing databases, processing user input, and ensuring 
+            security
+      
+      //- Why is it important
+      div
+        img(src="/images/deviousman.jpeg" title="Inverted man" alt="Devious looking individual" style="filter: drop-shadow(16px 16px 20px red) invert(100%);")
+        h2 Why Is It Important To Study? 
+        ul 
+          li You Use it Everyday!
+          p(style="font-size: 22px;").
+            Rather than float aimlessly through our lives, unaware of even our 
+            most visited pastimes, we should explore our environments and 
+            understand what we actually use!  Be aware!
+
+          li It's Interesting!
+          p(style="font-size: 22px;").
+            Certaintly if you're reading this, you at least thought this 
+            information would be cool to learn about!  I agree!
+
+          li Bad Actors! Everywhere! 
+          p(style="font-size: 22px;") <b><u>Sun Tzu</u></b> once said (or wrote):
+          ul 
+            li(style="font-size: 22px;").
+              "if you know your enemies and know yourself, you will not be 
+              imperiled in a hundred battles; if you do not know your enemies 
+              but do know yourself, you will win one and lose one; if you do 
+              not know your enemies nor yourself, you will be imperiled in 
+              every single battle."
+          p(style="font-size: 22px;"). 
+            ^^^What he said.  To know not just ourselves, but how dangers could 
+            present themselves, that is the way.  I can say no more.
+      
+      //- What will the class cover
+      div
+        img(src="/images/htmlcssjs.png" title="HTML CSS JavaScript" alt="HTML CSS JavaScript signs" style="width: 450px;")
+        h2 Class Topics Covered 
+        ul 
+          li HTML
+          li CSS
+          li JavaScript
+          li REST API
+          li(style="font-size: 40px;") <b>AND MUCH MORE...</b>
+      
+      //- Class info ()
+      div
+        img(src="/images/thumbup.jpeg" title="Hey dood" alt="Emoji giving thumbs up")
+        h2 Specific Class Info
+        pre.
+          - Meeting Times:  MWF 9am
+
+          - Location:  here idk... read the syllabus or somethin
+
+          - Class size:  Average
+
+          - Instructor:  Dr. Kropp 
+
+          - <b>BYOB</b>:  <u>Bring Your Own Browser</u>
+      
+      //- Even More info
+      div 
+        h2 Even MORE Reason to Join!
+        ul 
+          li As the graph below shows...
+          li IRREFUTABLE EVIDENCE TO WEB DEV SUPERIORITY <sup style="font-size: 12px;"><a style="color: red;" target="_blank" href="https://i.kym-cdn.com/entries/icons/original/000/040/390/cover2.jpg">(Source)</a></sup>
+          img(src="/images/Moneygraph.png" alt="A graph of a green line indicating expected income from web dev classes, with the green line going up, and a red line going down for students who never took the class" title="True Graph" style="float: initial; margin: 0px; padding: 0px; width: 50vw; height: auto;")
+          li(style="margin-top: 20px;") At this point, how could you not BUY BUY BUY!!!!!!<sup style="font-size: 12px;">*(Please make informed financial decisions)</sup>
+
+
+  script.
+    // Scroll past main HOME top to info just below faded image
+    setTimeout(console.log("First timeout"), 1000);
+    setTimeout(() => {document.getElementById("HOME-top-div").scrollIntoView({ behavior: "smooth" });}, 1000); 

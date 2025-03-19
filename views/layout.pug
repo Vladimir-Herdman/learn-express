@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="icon" type="images/jpg" href="/images/favicon.JPG")
+    
+    script(src="https://cdn.jsdelivr.net/npm/sweetalert2@11")
+    script.
+      //- Menu button dialog button functionality from required node_module 'sweetalerts'
+      function showPopup(){Swal.fire({
+        title: "Website created and maintained by Vova Herdman", 
+        text: "Most proud of the Study page, hopefully it still loads on differnet devices and screen sizes ;)", 
+        showCloseButton: true, 
+        icon: 'info'});
+      };
+  body
+    div(class="navbar")
+      div(id="links" class="links")
+        a(href='/') Home
+        a(href='/schedule') Schedule
+        a(href='/syllabus') Syllabus
+        a(href='/study') Study
+      button(onclick="showPopup()") ...
+    block content
+  
+  //- Client-Side Script that will run after current window is fully loaded:
+        - Bottom of doc to run after page is loaded
+        - Client-Side because written in the HTML doc users browser loads
+        - Used to underline current pages navbar link
+  script.
+    const currentURL = window.location.href;
+
+    let links_list = document.getElementById('links').children;
+
+    for (let i = 0; i < links_list.length; i++) {
+      if (links_list[i].href === currentURL) {
+        links_list[i].style.textDecoration = 'underline';
+        break;
+      }  
+    }

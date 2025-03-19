@@ -1,0 +1,386 @@
+/******************** ALL ********************/
+* {
+  box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body {
+  margin: 0px;
+  background-color: #333;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+/******************** LAYOUT - NAVBAR ********************/
+.navbar {
+  display: flex;
+  background-color: #333;
+  justify-content: center;
+  flex-wrap: wrap;
+  position:fixed;
+  top:0;
+  width: 100%;
+  z-index: 1;
+}
+.links {
+  display: flex;
+  background-color: #333;
+  justify-content: center;
+  flex: 90%;
+}
+.links a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+  border: solid 2px white;
+  width: 110px;;
+  /*flex-basis: 100%;*/ /* For links to fill whole of row and not just center */
+}
+.navbar button {
+  display: flex;
+  background-color: inherit;
+  font-size: large;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 8px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.navbar button:hover {
+  background-color: #fd7e14;
+  color: black;
+  cursor: pointer;
+}
+.links a:hover {
+  background-color: #fd7e14;
+  color: black;
+  cursor: pointer
+}
+.links a:not(:first-child) {
+  border-left: none;
+}
+
+/******************** INDEX ********************/
+.HOME-body {
+  background-color: #333;
+  color: white;
+}
+.main-image {
+  position: relative;
+}
+.main-image img {
+  width: 100%;
+}
+.main-image h1 {
+  color: white;
+  font-size: 80px;
+  white-space: nowrap;
+  position: absolute;
+  top: 17%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-image:after {
+  content:"";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(51,51,51,1) 45%);
+  height: 75%;
+}
+.main-arrow {
+  position: fixed; /* Keeps the arrow relative to the viewport */
+  top: 40%; /* Center vertically */
+  left: 45%; /* Initial position */
+  border-width: 0 40px 40px 0;
+  border-color: #fffacd;
+  border-style: solid;
+  display: inline-block;
+  padding: 50px;
+  transform: rotate(45deg);
+  z-index: 2;
+  animation: moveArrow 1.7s ease-out forwards;
+}
+.main-arrow-left {
+  position: fixed; /* Keeps the arrow relative to the viewport */
+  top: 40%; /* Center vertically */
+  left: 20%; /* Initial position */
+  border-width: 0 40px 40px 0;
+  border-color: #fffacd;
+  border-style: solid;
+  display: inline-block;
+  padding: 50px;
+  transform: rotate(45deg);
+  z-index: 2;
+  animation: moveArrow 1.7s ease-out forwards;
+}
+.main-arrow-right {
+  position: fixed; /* Keeps the arrow relative to the viewport */
+  top: 40%; /* Center vertically */
+  left: 70%; /* Initial position */
+  border-width: 0 40px 40px 0;
+  border-color: #fffacd;
+  border-style: solid;
+  display: inline-block;
+  padding: 50px;
+  transform: rotate(45deg);
+  z-index: 2;
+  animation: moveArrow 1.7s ease-out forwards;
+}
+.main-arrow-base {
+  position: fixed; /* Keeps the arrow relative to the viewport */
+  width: 50px;
+  height: 200px;
+  bottom: 0;
+  left: 0;
+  transform: translate(15px, 40px) rotate(-45deg);
+  background-color: #fffacd;
+  z-index: 2;
+}
+@keyframes moveArrow {
+  to {
+    opacity: 0;
+    top: 70%; /* Move to 50% of the viewport width */
+  }
+} 
+
+.HOME-class-info {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 80px 0px 80px;
+}
+.HOME-class-info div {
+  margin-bottom: 10%;
+  font-size: 30px;
+  padding: 10px;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease, color 0.5s ease;
+}
+.HOME-class-info div:nth-child(odd) {
+  background-color: rgb(86, 129, 221);
+  box-shadow: 0 0 40px 40px rgba(86, 129, 221, 1);
+}
+.HOME-class-info div:nth-child(odd):hover {
+  background-color: rgb(119, 155, 232);
+  box-shadow: 0 0 40px 40px rgba(119, 155, 232, 1);
+  color: rgb(0, 0, 0);
+}
+.HOME-class-info div:nth-child(even) {
+  background-color: rgb(16, 61, 158);
+  box-shadow: 0 0 40px 40px rgba(16, 61, 158, 1);
+}
+.HOME-class-info div:nth-child(even):hover {
+  background-color: rgb(6, 36, 102);
+  box-shadow: 0 0 40px 40px rgba(6, 36, 102, 1);
+}
+.HOME-class-info div h2{
+  font-size: 60px;
+}
+.HOME-class-info div img {
+  float: right;
+  margin-left: 20px; 
+  margin-top: 70px; 
+  width: 400px; 
+  height: auto;
+}
+.HOME-class-info a:visited {
+  color:#551A8B;
+}
+.HOME-class-info a:hover {
+  background-color: yellow;
+  border-radius: 10px;
+  padding: 3px;
+  color: red;
+  cursor: pointer;
+}
+
+/******************** SCHEDULE ********************/
+.SCHEDULE-body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+.SCHEDULE-body div {
+  background-color: #68acf4;
+  color: black;
+  width: fit-content;
+  border-radius: 10%;
+  margin: 30px 40px 30px 40px;
+  padding: 15px;
+  filter: drop-shadow(20px 10px 4px #96c1ef);
+  transition:color 0.8s ease, background-color 0.8s ease, filter 0.8s ease;
+}
+.SCHEDULE-body div:hover {
+  background-color: #3d2ee6;
+  color: orange;
+  filter: drop-shadow(20px 10px 4px #425db7);
+}
+
+/******************** NOTES ********************/
+.STUDY-wrapper {
+  margin: 0 auto;
+  margin-top: 80px;
+  padding: 0;
+  font-family: 'Courier New', 'Courier', 'monospace';
+  overflow: hidden;
+}
+.STUDY-contents {
+  width: 50%;
+  height: fit-content;
+  margin-left: 25%;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid blue; 
+  box-shadow: 10px 10px 10px rgb(90, 90, 236);
+}
+.STUDY-contents h1 {
+  align-self: center;
+}
+.STUDY-contents a:link {
+  color: #0000EE;
+}
+.STUDY-contents a:visited {
+  color:#551A8B;
+}
+.STUDY-contents a:hover {
+  background-color: yellow;
+  border-radius: 10px;
+  padding: 5px;
+  padding-left: 9px;
+  color: red;
+  cursor: pointer;
+}
+.STUDY-contents ul {
+  list-style-type: none; 
+  padding: 0;
+  margin: 0;
+}
+.STUDY-contents ul li {
+  list-style: none;
+  height: auto;
+  padding: 4px;
+  text-indent: 5px;
+}
+.STUDY-contents ul ul li {
+  list-style: none;
+  height: auto;
+  padding: 4px;
+  text-indent: 35px;
+}
+.STUDY-body {
+  margin-top: 50px;
+  scroll-margin-top: 70px;
+  color: #555;
+  background-color: #fffacd;
+  border-radius: 10px;
+  padding: 0 !important;
+  justify-content: center;
+  width: 60vw;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #dedede;
+  align-items: stretch;
+  height: 1317px;
+}
+.lines {
+  border-left: 1px solid #ffaa9f;
+  border-right: 1px solid #ffaa9f;
+  width: 4px;
+  float: left;
+  height: 1317px;
+  margin-left: 20px;
+}​
+.STUDY-body > * {
+  margin: 3px 0px 0px 3px;
+}
+.STUDY-body h3 {
+  margin-top: 12px;
+  border-bottom: 1px dotted #ccc;
+  text-indent: 25px;
+  overflow: hidden;
+}
+.STUDY-body ul {
+  list-style-type: none; 
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.STUDY-body ul li {
+  list-style: none;
+  border-bottom: 1px dotted #ccc;
+  height: auto;
+  padding: 4px;
+  text-indent: 50px;
+  transition: background-color 0.2s ease;
+}
+.STUDY-body ul ul li {
+  text-indent: 100px;
+}
+.STUDY-body ul ul ul li {
+  text-indent: 150px;
+}
+.STUDY-body ul ul ul ul li {
+  text-indent: 200px;
+}
+.STUDY-body li:hover {
+  background-color: #fbf4ac;
+}
+.circles {
+  border-left: 20px dotted #333;
+  float: left;
+  margin-top: 10px;
+  height: 1300px;
+  margin-left: 20px;
+  opacity: 0.8;
+}
+.rings {
+  border-left: 3px solid transparent; /* Invisible left border for spacing */
+  float: left;
+  margin-top: 15px;
+  height: 1300px;
+  margin-left: 0px;
+  position: relative;
+}
+.rings::before {
+  content: '';
+  position: absolute;
+  left: -60px; /* Adjust based on desired position */
+  top: 0;
+  height: 100%;
+  width: 50px;
+  background: repeating-linear-gradient(
+    to bottom,
+    white,
+    white 2px,
+    transparent 6px,
+    transparent 40px
+  );
+}
+
+.pdf_download {
+  margin: 30px;
+  margin-left: 35%;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #2d93e2;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.pdf_download:hover {
+  background-color: #1542ac;
+}
+.pdf_download:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

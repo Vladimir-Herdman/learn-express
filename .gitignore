@@ -1,0 +1,6 @@
+#Platform specific
+.DS_Store
+
+#Project specific
+node_modules/
+test/
